@@ -21,6 +21,9 @@
 	/*Красные оттенки*/
 	--color-red: #FF5500;
 
+	/*Частоиспользуемая рамка*/
+	--border: #{rem(1)} solid var(--color-dark-15);
+
 	/*Основные семейства шрифтов*/
 	--font-family-based: 'Inter', sans-serif;
 	--font-family-accent: 'Kumbh Sans', sans-serif;
