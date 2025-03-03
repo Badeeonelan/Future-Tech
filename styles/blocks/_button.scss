@@ -36,4 +36,9 @@
 		height: rem(55);
 		padding-inline: rem(20);
 	}
+
+	&--small {
+		height: rem(47);
+		padding: rem(10) rem(16);
+	}
 }

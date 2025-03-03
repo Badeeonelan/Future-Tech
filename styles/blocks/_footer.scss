@@ -1,0 +1,112 @@
+@use '../helpers' as *;
+
+.footer {
+	padding-block: rem(80) rem(40);
+
+	@include laptop {
+		padding-block: rem(60) rem(23);
+	}
+	
+	&__inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__body {
+		padding-block: fluid(80, 40);
+		border-bottom: rem(1) solid var(--color-dark-15);
+	}
+
+	&__menu {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: fluid(80, 40);
+
+		@include laptop {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		@include tablet {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include mobile {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&-main-link {
+			color: var(--color-light);
+		}
+
+		&-column {
+			display: flex;
+			flex-direction: column;
+			row-gap: rem(36);
+
+			@include tablet {
+				justify-self: center;
+			}
+
+			@include mobile {
+				&:last-child {
+					grid-area: 3 / 1 / 4 / 3;
+					justify-self: stretch;
+					row-gap: rem(16);
+					
+					.footer__menu-list {
+						flex-flow: row wrap;
+						column-gap: rem(12);
+					}
+				}
+			}
+		}
+
+		&-list {
+			display: flex;
+			flex-direction: column;
+			row-gap: rem(18);
+			align-items: start;
+		}
+
+		&-item {
+			.badge {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	&__extra {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: rem(40);
+
+		@include laptop {
+			padding-top: rem(23);
+		}
+
+		@include mobile {
+			flex-direction: column;
+			row-gap: rem(20);
+		}
+
+		&-menu {
+			
+			&-list {
+				display: flex;
+			}
+
+			&-item {
+				padding-inline: rem(11);
+			}
+			
+			&-item:not(:last-child) {
+				border-right: 1px solid var(--color-dark-15);
+			}
+		}
+	}
+
+	&__soc1als {
+		order: -1;
+	}
+}

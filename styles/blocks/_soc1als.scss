@@ -1,0 +1,15 @@
+.soc1als {
+	
+	&__list {
+		display: flex;
+		column-gap: 20px;
+	}
+
+	&__link {
+		color: var(--color-light);
+
+		svg * {
+			fill: currentColor;
+		}
+	}
+}
